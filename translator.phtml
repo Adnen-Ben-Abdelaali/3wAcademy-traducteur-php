@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <ttitle>Traducteur français - anglais</title>
+  </head>
+  <body>
+    <h1>Traducteur français - anglais</h1>
+    <?php if($result === null): ?>
+    <form method="POST" action="translator.php">
+        <select name="">
+          <option value="french">Français</option>
+          <option value="english">Anglais</option>
+        </select>
+        <input type="text" name="word" />
+        <input type="submit">Traduire</input>
+    </form>
+    <?php else: ?>
+      <?= $message ?>
+      <a href="translator.php">Taduire un autre mot !</a>
+    <?php endif; ?>
+  </body>
+</html>
